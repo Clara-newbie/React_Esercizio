@@ -1,7 +1,14 @@
-import { HelloWorld } from "./components/HelloWorld";
+import Hello from "./Hello";
+import Message from "./Message";
 
-function App() {
-  return <HelloWorld />;
+export default function App() {
+  return (
+    <div>
+      <Hello />
+      <Message />
+      <Hello />
+    </div>
+  );
 }
 
-export default App;
+// Ho importato senza difficoltà due volte il componente 'Hello' ed una 'Message'
