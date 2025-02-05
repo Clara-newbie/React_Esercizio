@@ -2,8 +2,8 @@ import Hello from "./Hello";
 import Welcome from "./Welcome";
 
 export default function App() {
-  const age = "66";
-  const name = "Clara";
+  const age = 64;
+  const name = "clara";
 
   return (
     <div>
