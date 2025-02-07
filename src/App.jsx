@@ -1,4 +1,5 @@
 import AlertClock from "./AlertClock";
+import Counter from "./Counter";
 import Hello from "./Hello";
 import Welcome from "./Welcome";
 
@@ -17,6 +18,8 @@ export default function App() {
       <hr />
       <Hello />
       <AlertClock onClickEvent={handleShowTime} />
+      <hr />
+      <Counter index={1} initialValue={0} />
     </div>
   );
 }
