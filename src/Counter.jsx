@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CounterDisplay from "./CounterDisplay";
 
 export default function Counter({ index, initialValue }) {
@@ -13,6 +13,10 @@ export default function Counter({ index, initialValue }) {
   function handleReset() {
     setCounter(initialValue);
   }
+
+  useEffect(() => {
+    console.log(counter);
+  }, [counter]);
 
   return (
     <div>

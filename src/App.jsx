@@ -1,3 +1,4 @@
+import Clock from "../Clock";
 import AlertClock from "./AlertClock";
 import Counter from "./Counter";
 import Hello from "./Hello";
@@ -20,6 +21,8 @@ export default function App() {
       <AlertClock onClickEvent={handleShowTime} />
       <hr />
       <Counter index={1} initialValue={0} />
+      <hr />
+      <Clock />
     </div>
   );
 }
