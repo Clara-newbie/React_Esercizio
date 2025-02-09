@@ -1,20 +1,20 @@
 export default function MouseClicker() {
-  function handleClickOne(event) {
+  function handleClickButton(event) {
     console.log(event.target.name);
   }
 
-  function handleClickTwo(event) {
-    console.log(event.target.src, event.currentTarget.name);
+  function handleClickImg(event) {
+    console.log(event.target.src);
   }
 
   return (
     <div>
-      <button name="one" onClick={handleClickOne}>
+      <button name="one" onClick={handleClickButton}>
         Bottone 1
       </button>
       ,
-      <button name="two" onClick={handleClickTwo}>
-        <img src="/click.png" />
+      <button name="two" onClick={handleClickButton}>
+        <img src="/click.png" onClick={handleClickImg} />
       </button>
     </div>
   );
