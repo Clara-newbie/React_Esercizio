@@ -1,9 +1,11 @@
-import Clock from "../Clock";
+import Clock from "./Clock";
 import AlertClock from "./AlertClock";
 import Counter from "./Counter";
 import Hello from "./Hello";
 import MouseClicker from "./MouseClicker";
-import Welcome from "./Welcome";
+import Welcome_1 from "./Welcome_1";
+import InteractiveWelcome from "./InteractiveWelcome";
+import Login from "./Login";
 
 export default function App() {
   const age = 64;
@@ -14,9 +16,14 @@ export default function App() {
     alert(`Adesso sono le ${time.toLocaleTimeString()}`);
   }
 
+  function onLogin() {
+    (data) => console.log(data);
+  }
+  //JSON.stringify(formData, null, 2)
+
   return (
     <div>
-      <Welcome name={name} age={age} />
+      <Welcome_1 name={name} age={age} />
       <hr />
       <Hello />
       <AlertClock onClickEvent={handleShowTime} />
@@ -26,6 +33,10 @@ export default function App() {
       <Clock />
       <hr />
       <MouseClicker />
+      <hr />
+      <InteractiveWelcome />
+      <hr />
+      <Login onLogin={onLogin} />
     </div>
   );
 }
