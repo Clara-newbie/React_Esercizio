@@ -7,6 +7,9 @@ import Welcome_1 from "./Welcome_1";
 import InteractiveWelcome from "./InteractiveWelcome";
 import Login from "./Login";
 import UncontrolledLogin from "./UncontrolledLogin";
+import FocusableInput from "./FocusableInput";
+import MountedRef from "./MountedRef";
+import { StrictMode } from "react";
 
 export default function App() {
   const age = 64;
@@ -40,6 +43,11 @@ export default function App() {
       <Login onLogin={onLogin} />
       <hr />
       <UncontrolledLogin />
+      <hr />
+      <FocusableInput />
+      <StrictMode>
+        <MountedRef />
+      </StrictMode>
     </div>
   );
 }
