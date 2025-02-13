@@ -6,6 +6,7 @@ import MouseClicker from "./MouseClicker";
 import Welcome_1 from "./Welcome_1";
 import InteractiveWelcome from "./InteractiveWelcome";
 import Login from "./Login";
+import UncontrolledLogin from "./UncontrolledLogin";
 
 export default function App() {
   const age = 64;
@@ -23,7 +24,7 @@ export default function App() {
 
   return (
     <div>
-      <Welcome_1 name={name} age={age} />
+      {/* <Welcome_1 name={name} age={age} />
       <hr />
       <Hello />
       <AlertClock onClickEvent={handleShowTime} />
@@ -33,10 +34,12 @@ export default function App() {
       <Clock />
       <hr />
       <MouseClicker />
-      <hr />
+      <hr /> */}
       <InteractiveWelcome />
       <hr />
       <Login onLogin={onLogin} />
+      <hr />
+      <UncontrolledLogin />
     </div>
   );
 }

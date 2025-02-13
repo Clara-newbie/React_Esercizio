@@ -6,7 +6,7 @@ const initialData = {
   checkbox: false,
 };
 
-export default function Login({ onLogin }) {
+export default function Login_1({ onLogin }) {
   const [data, setData] = useState(initialData);
 
   function handleInputChange(event) {
