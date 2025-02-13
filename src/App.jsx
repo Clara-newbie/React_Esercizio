@@ -10,10 +10,29 @@ import UncontrolledLogin from "./UncontrolledLogin";
 import FocusableInput from "./FocusableInput";
 import MountedRef from "./MountedRef";
 import { StrictMode } from "react";
+import Colors from "./Colors";
 
 export default function App() {
   const age = 64;
   const name = "clara";
+  const colors = [
+    {
+      id: "item_1",
+      name: "pink",
+    },
+    {
+      id: "item_2",
+      name: "green",
+    },
+    {
+      id: "item_3",
+      name: "yellow",
+    },
+    {
+      id: "item_4",
+      name: "purple",
+    },
+  ];
 
   function handleShowTime() {
     const time = new Date();
@@ -48,6 +67,8 @@ export default function App() {
       <StrictMode>
         <MountedRef />
       </StrictMode>
+      <hr />
+      <Colors colors={colors} />
     </div>
   );
 }
