@@ -20,7 +20,7 @@ export default function Login_1({ onLogin }) {
   }
 
   function handleLogin() {
-    onLogin({ data });
+    onLogin(data);
   }
 
   function handleReset() {
@@ -48,13 +48,10 @@ export default function Login_1({ onLogin }) {
         onChange={handleInputChange}
       />
 
-      {data.username && data.password ? (
-        <button>Login</button>
-      ) : (
-        <button disabled onClick={handleLogin}>
-          Login
-        </button>
-      )}
+      <button disabled={!data.username && !data.password} onClick={handleLogin}>
+        Login
+      </button>
+
       <button onClick={handleReset}>Reset</button>
     </div>
   );

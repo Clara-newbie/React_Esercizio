@@ -11,6 +11,7 @@ import FocusableInput from "./FocusableInput";
 import MountedRef from "./MountedRef";
 import { StrictMode } from "react";
 import Colors from "./Colors";
+import Todolist from "./TodoList";
 
 export default function App() {
   const age = 64;
@@ -39,8 +40,8 @@ export default function App() {
     alert(`Adesso sono le ${time.toLocaleTimeString()}`);
   }
 
-  function onLogin() {
-    (data) => console.log(data);
+  function onLogin(data) {
+    console.log(data);
   }
   //JSON.stringify(formData, null, 2)
 
@@ -69,6 +70,8 @@ export default function App() {
       </StrictMode>
       <hr />
       <Colors colors={colors} />
+      <hr />
+      <Todolist />
     </div>
   );
 }
