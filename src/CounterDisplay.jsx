@@ -1,3 +1,7 @@
 export default function CounterDisplay({ counter }) {
-  return <h2>Il tuo counter:{counter}</h2>;
+  const MyStyle = {
+    fontSize: "27px",
+    color: "maroon",
+  };
+  return <h2 style={MyStyle}>Il tuo counter:{counter}</h2>;
 }

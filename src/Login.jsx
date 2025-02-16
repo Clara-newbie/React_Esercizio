@@ -6,7 +6,7 @@ const initialData = {
   checkbox: false,
 };
 
-export default function Login_1({ onLogin }) {
+export default function Login({ onLogin }) {
   const [data, setData] = useState(initialData);
 
   function handleInputChange(event) {
@@ -48,7 +48,15 @@ export default function Login_1({ onLogin }) {
         onChange={handleInputChange}
       />
 
-      <button disabled={!data.username && !data.password} onClick={handleLogin}>
+      <button
+        style={
+          data.password.length < 8
+            ? { backgroundColor: "red" }
+            : { backgroundColor: "green" }
+        }
+        disabled={!data.username && !data.password}
+        onClick={handleLogin}
+      >
         Login
       </button>
 

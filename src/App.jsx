@@ -52,16 +52,16 @@ export default function App() {
       <Hello />
       <AlertClock onClickEvent={handleShowTime} />
       <hr />
-      <Counter index={1} initialValue={0} />
-      <hr />
       <Clock />
       <hr />
       <MouseClicker />
       <hr /> */}
+      <Counter index={1} initialValue={0} />
+      <hr />
       <InteractiveWelcome />
       <hr />
       <Login onLogin={onLogin} />
-      <hr />
+      {/*<hr />
       <UncontrolledLogin />
       <hr />
       <FocusableInput />
@@ -71,7 +71,7 @@ export default function App() {
       <hr />
       <Colors colors={colors} />
       <hr />
-      <Todolist />
+      <Todolist /> */}
     </div>
   );
 }
