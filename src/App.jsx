@@ -17,9 +17,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Welcome_1 name="Clara" />} />
         <Route path="/counter" element={<Counter />} />
-        <Route path="/users" element={<GithubUserList />} />
-        <Route index element={<h2>Add a user and select it</h2>} />
-        <Route path=":username" element={<ShowGithubUser />} />
+        <Route path="/users" element={<GithubUserList />}>
+          <Route index element={<h2>Add a user and select it</h2>} />
+          <Route path=":username" element={<ShowGithubUser />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
